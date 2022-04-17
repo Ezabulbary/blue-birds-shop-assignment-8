@@ -29,7 +29,8 @@ const Shop = () => {
         setCart(newCarts);
     }
 
-    const clickDeleteToCart = () => {
+    const clickDeleteToCart = (id) => {
+        const item = 
         setCart([]);
     }
 

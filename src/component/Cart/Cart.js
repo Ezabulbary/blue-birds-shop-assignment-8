@@ -27,9 +27,6 @@ const Cart = ({ cart, clickDeleteToCart }) => {
         <div className='cart'>
             <div className="top-bar">
                 <h3>Order Summary</h3>
-                <button className='delete' onClick={clickDeleteToCart}>
-                    <FontAwesomeIcon icon={faTrash} />
-                </button>
             </div>
             {
                 cart.map((item, id) => (
@@ -41,9 +38,10 @@ const Cart = ({ cart, clickDeleteToCart }) => {
                         />
                         <div className='product-info'>
                             <p>{item.name}</p>
-                            <p>Price: ${item.price}</p>
-                            <p>Quantity: {item.quantity}</p>
                         </div>
+                        <button className='delete' onClick={() => clickDeleteToCart(id)}>
+                            <FontAwesomeIcon icon={faTrash} />
+                        </button>
                     </div>
                 ))
             }

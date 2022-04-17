@@ -13,10 +13,6 @@
     background-color: rgba(150, 141, 141, 0.212);
 }
 
-.delete:hover {
-    color: red;
-}
-
 .cart-item {
     height: 80px;
     width: 100%;
@@ -25,6 +21,7 @@
     grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .cart-item-image {
@@ -36,6 +33,17 @@
 
 .product-info p {
     margin: 0;
+}
+
+.delete{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+}
+
+.delete:hover {
+    color: red;
 }
 
 .get-one-btn {
