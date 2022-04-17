@@ -1,0 +1,66 @@
+.cart {
+    position: sticky;
+    top: 0;
+}
+
+.top-bar {
+    width: 100%;
+    height: 48px;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(150, 141, 141, 0.212);
+}
+
+.delete:hover {
+    color: red;
+}
+
+.cart-item {
+    height: 80px;
+    width: 100%;
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-image {
+    height: 60px;
+    width: 60px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+
+.product-info p {
+    margin: 0;
+}
+
+.get-one-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(150, 141, 141, 0.212);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.get-one-btn-disable {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(252, 252, 252, 0.537);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.get-one-btn:hover {
+    background-color: rgba(3, 180, 3, 0.874);
+    color: white;
+}
