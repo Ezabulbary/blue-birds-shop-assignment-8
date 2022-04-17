@@ -13,12 +13,24 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, []);
 
-    const handleAddToCart = (id) => {
-        setCart(id);
+    const handleAddToCart = (selectedProduct) => {
+        let newCarts = [];
+        const exist = cart.find(product => product.id === selectedProduct.id);
+        if (!exist) {
+            selectedProduct.quantity = 1;
+            newCarts = [...cart, selectedProduct];
+        }
+        else {
+            const rest = cart.filter(product => product.id !== selectedProduct.id);
+            selectedProduct.quantity = selectedProduct.quantity + 1;
+            newCarts = [...rest, selectedProduct];
+        }
+
+        setCart(newCarts);
     }
 
-    const clickDeleteToCart = (id) => {
-        console.log(id);
+    const clickDeleteToCart = () => {
+        setCart([]);
     }
 
     return (
