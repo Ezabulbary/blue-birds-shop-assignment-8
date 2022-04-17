@@ -26,7 +26,7 @@ const Cart = ({ cart, clickDeleteToCart }) => {
     return (
         <div className='cart'>
             <div className="top-bar">
-                <h3>Order Summary</h3>
+                <h3>Selected Products</h3>
             </div>
             {
                 cart.map((item, id) => (
@@ -39,7 +39,7 @@ const Cart = ({ cart, clickDeleteToCart }) => {
                         <div className='product-info'>
                             <p>{item.name}</p>
                         </div>
-                        <button className='delete' onClick={() => clickDeleteToCart(id)}>
+                        <button className='delete'>
                             <FontAwesomeIcon icon={faTrash} />
                         </button>
                     </div>
@@ -48,6 +48,9 @@ const Cart = ({ cart, clickDeleteToCart }) => {
             <div>
                 <button className={addProduct ? "get-one-btn" : "get-one-btn-disable"} onClick={getOneForMe} disabled={!addProduct}>Get One For Me
                     <FontAwesomeIcon icon={faFaceSmile} />
+                </button>
+                <button className={addProduct ? "all-delete" : "all-delete-disable"} onClick={clickDeleteToCart} disabled={!addProduct}>Clear All Products
+                    <FontAwesomeIcon icon={faTrash} />
                 </button>
                 {Object.keys(freeProducts).length > 0 && <div className="cart-item">
                     <img
