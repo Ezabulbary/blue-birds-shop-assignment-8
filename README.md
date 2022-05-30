@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Blue Birds Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+project Live Site [GO to Website](https://blue-birds-shop.netlify.app/).
 
 ## Available Scripts
 
